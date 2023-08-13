@@ -24,7 +24,7 @@
         "shx":              "0.3.4"
     },
     "scripts": {
-        "install":          "node ndi.js",
+        "install":          "node ndi.mjs",
         "build":            "node-gyp rebuild",
         "build:arm":        "CXX=arm-linux-gnueabihf-g++ node-gyp rebuild --arch\"arm\" --target_arch=\"arm\"",
         "test":             "node scratch/scratchVersion.js",
