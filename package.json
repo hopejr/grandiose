@@ -1,6 +1,6 @@
 {
     "name":        "grandiose",
-    "version":     "0.0.5",
+    "version":     "0.0.6",
     "description": "Node.JS native bindings to the Newtek NDI SDK.",
     "homepage":    "https://github.com/Streampunk/grandiose#readme",
     "keywords":    [ "Newtek", "NDI", "network", "device", "interface" ],
@@ -26,8 +26,9 @@
     "scripts": {
         "install":          "node ndi.mjs",
         "build":            "node-gyp rebuild",
-        "build:arm":        "CXX=arm-linux-gnueabihf-g++ node-gyp rebuild --arch\"arm\" --target_arch=\"arm\"",
-        "build:linuxx86":   "CXX=x86_64-linux-gnu-g++ node-gyp rebuild --arch\"x64\" --target_arch=\"x64\"",
+        "build:linux-arm": "CXX=arm-linux-gnueabihf-g++ node-gyp rebuild --arch\"arm\" --target_arch=\"arm\"",
+        "build:linux-arm64": "CXX=aarch64-linux-gnu-g++ node-gyp rebuild --arch\"arm64\" --target_arch=\"arm64\"",
+        "build:linux-x64": "CXX=x86_64-linux-gnu-g++ node-gyp rebuild --arch\"x64\" --target_arch=\"x64\"",
         "test":             "node scratch/scratchVersion.js",
         "clean":            "shx rm -rf ndi build"
     }
