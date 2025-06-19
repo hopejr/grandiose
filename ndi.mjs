@@ -80,7 +80,7 @@ import spawn from "cross-spawn"
     }
     else if (os.platform() === "darwin") {
         /*  download NDI SDK distribution  */
-        const url1 = "https://downloads.ndi.tv/SDK/NDI_SDK_Mac/Install_NDI_SDK_v6_macOS.pkg"
+        const url1 = "https://downloads.ndi.tv/SDK/NDI_SDK_Mac/Install_NDI_SDK_v6_Apple.pkg"
         console.log("-- dowloading NDI SDK distribution")
         const data1 = await got(url1, { responseType: "buffer" })
         const file1 = tmp.tmpNameSync()
