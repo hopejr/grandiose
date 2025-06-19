@@ -102,7 +102,7 @@ import spawn from "cross-spawn"
         shell.mkdir("-p", "ndi/lib/mac_universal")
         shell.mv(path.join(dir1, "NDI SDK for Apple/include/*.h"), "ndi/include/")
         shell.mv(path.join(dir1, "NDI SDK for Apple/lib/macOS/*.dylib"), "ndi/lib/mac_universal/")
-        shell.mv(path.join(dir1, "NDI SDK for App/lib/macOS/libndi_licenses.txt"), "ndi/lib/mac_universal/")
+        shell.mv(path.join(dir1, "NDI SDK for Apple/lib/macOS/libndi_licenses.txt"), "ndi/lib/mac_universal/")
 
         /*  remove temporary files  */
         console.log("-- removing temporary files")
