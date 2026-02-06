@@ -34,12 +34,16 @@
                     "library_dirs": [ "<(ndi_dir)/lib/win-x64" ]
                 }
             } ],
+            [ "OS == 'win' and target_arch == 'arm64'", {
+                "type": "none",
+                "sources": []
+            } ],
             [ "OS == 'linux' and target_arch == 'ia32'", {
                 "copies": [ {
                     "destination":  "build/Release",
                     "files":        [ "<(ndi_dir)/lib/lnx-x86/libndi.so",
                                       "<(ndi_dir)/lib/lnx-x86/libndi.so.6",
-                                      "<(ndi_dir)/lib/lnx-x86/libndi.so.6.2.0" ]
+                                      "<(ndi_dir)/lib/lnx-x86/libndi.so.6.2.1" ]
                 } ],
                 "link_settings": {
                     "libraries":    [ "-Wl,-rpath,'$$ORIGIN'", "-lndi" ],
@@ -51,7 +55,7 @@
                     "destination":  "build/Release",
                     "files":        [ "<(ndi_dir)/lib/lnx-x64/libndi.so",
                                       "<(ndi_dir)/lib/lnx-x64/libndi.so.6",
-                                      "<(ndi_dir)/lib/lnx-x64/libndi.so.6.2.0" ]
+                                      "<(ndi_dir)/lib/lnx-x64/libndi.so.6.2.1" ]
                 } ],
                 "link_settings": {
                     "libraries":    [ "-Wl,-rpath,'$$ORIGIN'", "-lndi" ],
@@ -63,7 +67,7 @@
                     "destination":  "build/Release",
                     "files":        [ "<(ndi_dir)/lib/lnx-armv7l/libndi.so",
                                       "<(ndi_dir)/lib/lnx-armv7l/libndi.so.6",
-                                      "<(ndi_dir)/lib/lnx-armv7l/libndi.so.6.2.0" ]
+                                      "<(ndi_dir)/lib/lnx-armv7l/libndi.so.6.2.1" ]
                 } ],
                 "link_settings": {
                     "libraries":    [ "-Wl,-rpath,'$$ORIGIN'", "-lndi" ],
@@ -75,7 +79,7 @@
                     "destination":  "build/Release",
                     "files":        [ "<(ndi_dir)/lib/lnx-arm64/libndi.so",
                                       "<(ndi_dir)/lib/lnx-arm64/libndi.so.6",
-                                      "<(ndi_dir)/lib/lnx-arm64/libndi.so.6.2.0" ]
+                                      "<(ndi_dir)/lib/lnx-arm64/libndi.so.6.2.1" ]
                 } ],
                 "link_settings": {
                     "libraries":    [ "-Wl,-rpath,'$$ORIGIN'", "-lndi" ],
